@@ -1,0 +1,118 @@
+:root{
+  --primary-color: #2196f3;
+  --secondary-color:#ff3d00;
+  --header-color:#1e88e5;
+  --secondary-information-color:#42a5f5;
+  --text-color:white;
+  --secondary-text-color:black;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*-------------------------header-------------------------------*/
+
+header{
+  background-color:green;
+  height:205vh;
+  background-color:var(--primary-color);
+}
+
+header nav{
+  position:sticky;
+  top:0;
+}
+
+header nav ul{
+  background-color:var(--header-color);
+  padding:1em;
+  height:4em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items:center;
+  justify-content:flex-end;
+  list-style-type: none;
+  
+}
+
+
+header nav ul li a{
+  font-size:1.5em;
+  margin:0.5em;
+  color:white;
+  text-decoration:none;
+}
+
+header nav ul li:first-child{
+  margin-right:auto;
+}
+
+header article{
+  width:100vw;
+  height:60vh;
+  padding-top:25%;
+  text-align:center;
+
+}
+
+header article h1{
+  font-size:5em;
+  color:var(--secondary-color);
+}
+
+header article p{
+  margin-top:1em;
+  padding: 0 0.5em 0 0.5em;
+  font-size:2em;
+  color:white;
+}
+
+header article p span{
+  color:var(--secondary-color);
+}
+
+header > div{
+  display:flex;
+  justify-content:center;
+  position:absolute;
+  bottom:0;
+  width:100vw;
+  height:5vh;
+  background-color:#ffffff;
+}
+
+header div>div{
+  display:flex;
+  justify-content:center;
+  background-color:white;
+  height:4em;
+  width:4em;
+  border-radius:50%;
+  position:absolute;
+  top:-4.5vh;
+}
+
+header div div div{
+  background-color:var(--secondary-color);
+  width:0.2em;
+  height:1.4em;
+  top:1em;
+  border-radius:initial;
+  animation:scroll 1.5s infinite ease-out ;
+}
+
+/*-------------------------Animation--------------------------*/
+@keyframes scroll{
+  from{
+    transform:translateY(-0.5em);
+    opacity:0.2;
+  }
+  to{
+    transform:translateY(1em);
+    opacity:1;
+  }
+}
