@@ -55,7 +55,8 @@ header{
   background-color:var(--primary-color);
   background-image:url('../assets/image/landingmobile.svg');
   background-repeat: no-repeat;
-  background-size: cover;
+   background-size: cover;
+  background-attachment:fixed;
 }
 
 header nav{
@@ -174,7 +175,7 @@ header div div div{
   border-radius:50%;
   background-color:#4537e4;
   opacity:0.1;
-  animation: bubles infinite 50s linear alternate;
+  animation: bubles infinite 80s linear alternate;
   animation-delay:2s;
 }
 
