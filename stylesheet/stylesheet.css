@@ -15,15 +15,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Droid Serif', serif;
 }
 
 a{
+  font-family:Ubuntu, serif;
   text-decoration:none;
   color:var(--secondary-color);
 }
 
-h2,h3{
+h1,h2,h3{
+  font-family:Ubuntu, serif;
   color:var(--primary-color);
 }
 
@@ -49,9 +51,11 @@ body{
 /*-------------------------header-------------------------------*/
 
 header{
-  background-color:green;
   height:93vh;
   background-color:var(--primary-color);
+  background-image:url('../assets/image/landingmobile.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header nav{
@@ -91,11 +95,12 @@ header nav ul li:first-child{
 }
 
 header article{
+  position:relative;
   width:100vw;
   height:60vh;
   padding-top:25%;
   text-align:center;
-    animation: hallo 0.8s ease-out;
+    animation: hallo 1.5s ease-out;
 }
 
 header article h1{
@@ -114,6 +119,8 @@ header article p{
 header article p span{
   color:var(--secondary-color);
 }
+
+/*pijl die naar beneden wijst*/
 header div{
     background-color:var(--background-color);
 }
@@ -147,6 +154,42 @@ header div div div{
   animation:scroll 1.5s infinite ease-out;
 }
 
+/*overlay*/
+.overlay{
+  position:absolute;
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+  top:0;
+  left:0;
+  z-index:0;
+  background: linear-gradient(135deg, rgb(41, 130, 232) 0%,rgba(37,117,242,0.86) 80%,rgba(41,121,255,0.70) 100%);;
+}
+
+.overlay div{
+  position:absolute;
+  top:30%;
+  height:10em;
+  width:10em;
+  border-radius:50%;
+  background-color:#4537e4;
+  opacity:0.1;
+  animation: bubles infinite 50s linear alternate;
+  animation-delay:2s;
+}
+
+.overlay div:nth-child(2){
+  top:60%;
+  left:80%;
+  animation-direction:alternate reverse;
+}
+
+
+.overlay div:nth-child(3){
+  top:10%;
+  left:10%;
+  animation-direction:reverse;
+}
 /*-------------------------Overzicht pagina------------------*/
 .overzicht{
   display:flex;
@@ -162,6 +205,9 @@ main section{
 
 
 main section article{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
   margin-top:2em;
   padding:0.5em;
   height:25em;
@@ -171,6 +217,7 @@ main section article{
 
 main section article p{
   margin-top:1em;
+  text-align:center;
 }
 
 main section article a{
@@ -196,14 +243,14 @@ main section article div{
   display:flex;
   justify-content:center;
   margin-top:1.5em;
-  height:55%;
+  height:12em;
   width:100%;
+  overflow:hidden;
 }
 
 main section article img{
   max-width:100%;
   max-height:100%;
-  overflow:hidden;
    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
@@ -230,7 +277,7 @@ main section:nth-child(2){
   }
 
   50%{
-    transform:translateY(-2em);
+    transform:translateY(-0.5em);
   }
 
   68%{
@@ -259,4 +306,27 @@ main section:nth-child(2){
    opacity:1;
    transform:translateX(0);
  }
+}
+
+@keyframes bubles{
+  0%{
+    transform:translate(0);
+  }
+
+  25%{
+    transform:translate(-70vw, -60vh)
+  }
+
+  50%{
+    transform:translate(10vw, 100vh);
+  }
+
+  75%{
+    transform:translate(-100vw, 10vh);
+  }
+
+  100%{
+    transform:translate(79vw, -30vh);
+  }
+ 
 }
