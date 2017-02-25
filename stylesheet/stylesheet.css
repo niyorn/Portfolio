@@ -95,12 +95,13 @@ header article{
   height:60vh;
   padding-top:25%;
   text-align:center;
-
+    animation: hallo 1.2s ease-out;
 }
 
 header article h1{
   font-size:5em;
   color:var(--secondary-color);
+  transform-origin:right;
 }
 
 header article p{
@@ -133,6 +134,7 @@ header div>div{
   border-radius:50%;
   position:absolute;
   top:-4.5vh;
+  animation: bounce 3.5s cubic-bezier(0.24, 1.26, 0.26, 1.36);
 }
 
 header div div div{
@@ -141,7 +143,7 @@ header div div div{
   height:1.4em;
   top:1em;
   border-radius:initial;
-  animation:scroll 1.5s infinite ease-out ;
+  animation:scroll 1.5s infinite ease-out;
 }
 
 /*-------------------------Overzicht pagina------------------*/
@@ -219,4 +221,41 @@ main section:nth-child(2){
     transform:translateY(1em);
     opacity:1;
   }
+}
+
+@keyframes bounce{
+  0%{
+    transform:translateY(-110vh);
+  }
+
+  50%{
+    transform:translateY(0);
+  }
+
+  68%{
+     transform:translateY(-9em);
+  }
+
+  70%{
+    transform:translateY(-10em);
+  }
+
+  90%{
+    transform:translateY(-1em);
+  }
+  100%{
+    transform:translateY(0);
+  }
+}
+
+@keyframes hallo{
+ from{
+   opacity:0.2;
+   transform:translateX(-110vw);
+ }
+
+ to{
+   opacity:1;
+   transform:translateX(0);
+ }
 }
