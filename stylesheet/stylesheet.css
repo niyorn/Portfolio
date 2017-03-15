@@ -128,9 +128,10 @@ header div{
 header > div{
   display:flex;
   justify-content:center;
+  margin-left: -3em;
   position:absolute;
   bottom:0;
-  width: 100%;
+  width: 105vw;
   height:2.5vh;
 }
 
@@ -143,6 +144,7 @@ header div>div{
   border-radius:50%;
   position:absolute;
   top:-4.5vh;
+  left:
   animation: bounce 3.5s cubic-bezier(0.24, 1.26, 0.26, 1.36);
 }
 
@@ -159,7 +161,7 @@ header div div div{
 /*overlay*/
 .overlay{
   position:absolute;
-  width:100vw;
+  width:105vw;
   height:100vh;
   overflow:hidden;
   top:0;
@@ -223,6 +225,7 @@ main section article section{
   flex-wrap:wrap;
   justify-content:center;
   transition: all 0.5s;
+  align-items: center;
 }
 
 main section article p{
@@ -230,7 +233,7 @@ main section article p{
   text-align:center;
 }
 
-main section article a{
+main section article a, footer a{
   display:block;
   font-size:1.1em;
   width:7em;
@@ -266,9 +269,35 @@ main section article img{
 }
 
 main section:nth-child(2){
-  margin-top:3em;
+  margin-top: 7em;
 }
 
+.recent article{
+  color:white;
+  background-color:var(--primary-color)
+}
+
+.recent article h3{
+  color:white;
+}
+
+/*-------------------------Footer-----------------------------*/
+footer{
+  background-color:rgba(0, 0, 0, 0.1);
+  margin-top:5em;
+  color:white;
+  text-align:center;
+  padding:0.5em;
+}
+
+footer a{
+    display: inline-block;
+    margin:0;
+}
+
+footer a:hover{
+   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
 
 /*-------------------------Animation--------------------------*/
 @keyframes scroll{
@@ -419,15 +448,14 @@ main section:nth-child(2){
   }
   
 
-
   header div>div{
-  height:7em;
-  width:7em;
+  height:5em;
+  width:5em;
   animation: bounce 4.5s cubic-bezier(0.24, 1.26, 0.26, 1.36);
 }
 
 header div div div{
-  width:0.5em;
+  width:0.3em;
   height:2em;
 }
 
@@ -438,7 +466,7 @@ header div div div{
 
 main section h2{
   display:block;
-  width:10%;
+  width: 12%;
   margin-left:2em;
 }
 
@@ -448,11 +476,80 @@ main section h2{
   color:white;
   background-color:var(--primary-color)
 }
+  
+.recent article p{
+ font-size: 2.5em;
+}
 
 .recent  article h3{
   color:white;
   font-size:5vw;
+  line-height:2;
 }
+  
+  .recent article div{
+    width: 50%;
+  }
+  
+  .recent article section p{
+  margin:-2em 0;
+    
+  }
+
+.andere{
+  display:flex;
+  width:100vw;
+  justify-content:center;
+}
+
+.andere h2{
+  display:block;
+  position:absolute;
+  left: 0em;
+}
+
+.andere article{
+  justify-content:center;
+  margin-top:6em;
+  width:23em;
+  flex-wrap: wrap;
+}
+
+.andere article:nth-of-type(2){
+  margin-left:1em;
+  margin-right:1em;
+}
+
+.andere article section h3{
+  font-size:2em;
+}
+
+/************/
+
+
+  .andere article div{
+    order:0;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: initial;
+    height: 50%;
+  }
+
+  .andere article section{
+    width:100%;
+    align-items:space-around;
+  }
+
+  .andere article h3{
+    font-size:7vw;
+  }
+
+  .andere article div img{
+    box-shadow:none;
+  }
+
+
+
 
 
 }
