@@ -51,7 +51,7 @@ body{
 /*-------------------------header-------------------------------*/
 
 header{
-  height:90vh;
+  height:100vh;
   background-color:var(--primary-color);
   background-image:url('../assets/image/landingmobile.svg');
   background-repeat: no-repeat;
@@ -128,7 +128,6 @@ header div{
 header > div{
   display:flex;
   justify-content:center;
-  margin-left: -3em;
   position:absolute;
   bottom:0;
   width: 105vw;
@@ -368,7 +367,7 @@ footer a:hover{
   100%{
     transform:translate(79vw, -30vh);
   }
- 
+
 }
 
 
@@ -378,7 +377,7 @@ footer a:hover{
   main section article{
     font-size:1.2em;
   }
-  
+
 }
 
 /*-------------------------Media Queries-----------------*/
@@ -446,7 +445,7 @@ footer a:hover{
     display:block;
     width:14em;
   }
-  
+
 
   header div>div{
   height:5em;
@@ -458,6 +457,10 @@ header div div div{
   width:0.3em;
   height:2em;
 }
+
+main section article section{
+    padding-right:1.5em;
+  }
 
 .overzicht {
   justify-content:initial;
@@ -476,7 +479,7 @@ main section h2{
   color:white;
   background-color:var(--primary-color)
 }
-  
+
 .recent article p{
  font-size: 2.5em;
 }
@@ -486,14 +489,14 @@ main section h2{
   font-size:5vw;
   line-height:2;
 }
-  
+
   .recent article div{
     width: 50%;
   }
-  
+
   .recent article section p{
   margin:-2em 0;
-    
+
   }
 
 .andere{
