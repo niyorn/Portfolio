@@ -130,8 +130,8 @@ header > div{
   justify-content:center;
   position:absolute;
   bottom:0;
-  width: 105vw;
-  height:2.5vh;
+  width: 100vw;
+  height: 2.5vh;
 }
 
 header div>div{
@@ -143,7 +143,6 @@ header div>div{
   border-radius:50%;
   position:absolute;
   top:-4.5vh;
-  left:
   animation: bounce 3.5s cubic-bezier(0.24, 1.26, 0.26, 1.36);
 }
 
@@ -154,19 +153,19 @@ header div div div{
   top:1em;
   border-radius:initial;
   animation:scroll 1.5s infinite ease-out;
-  animation-delay: 4.5s;
+  animation-delay: 4s;
 }
 
 /*overlay*/
 .overlay{
   position:absolute;
-  width:105vw;
-  height:100vh;
+  width: 100vw;
+  height: 97.5vh;
   overflow:hidden;
   top:0;
   left:0;
   z-index:0;
-  background: linear-gradient(135deg, rgb(41, 130, 232) 0%,rgba(37,117,242,0.86) 80%,rgba(41,121,255,0.70) 100%);;
+  background: linear-gradient(135deg, rgb(41, 130, 232) 0%,rgba(37,117,242,0.86) 80%,rgba(41,121,255,0.70) 100%);
 }
 
 .overlay div{
@@ -192,6 +191,10 @@ header div div div{
   top:10%;
   left:10%;
   animation-direction:reverse;
+}
+
+.header{
+  height:auto;
 }
 /*-------------------------Overzicht pagina------------------*/
 .overzicht{
@@ -297,6 +300,64 @@ footer a{
 footer a:hover{
    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
+
+/*-------------------------Content----------------------------*/
+.main{
+  display:flex;
+  margin-top:4em;
+}
+
+.main h1{
+  font-size:3em;
+  margin-top:1em;
+  width:auto;
+  border-bottom:solid 0.2em;
+}
+
+.main h2{
+  margin-top:2rem;
+  font-size:2em;
+}
+
+.main h3{
+  font-size:1em;
+}
+
+.main h3~*{
+  margin-top:1em;
+}
+
+.main article{
+  padding: 0 1.5em;
+}
+
+.main section{
+  width:initial;
+}
+
+
+/*-------------------------About------------------------------*/
+
+.about article section{
+  overflow:hidden;
+}
+
+.about article section{
+  margin-top:2em;
+}
+
+.about article section img{
+  width:100%;
+  height:100%;
+}
+
+about article section ul{
+  display:flex
+}
+.introductie p:nth-of-type(2){
+  margin-top:1em;
+}
+
 
 /*-------------------------Animation--------------------------*/
 @keyframes scroll{
