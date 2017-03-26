@@ -247,8 +247,8 @@ main section article p{
   text-align:center;
 }
 
-main section article a, footer a{
-  display:block;
+main section article a, footer a, .main section a{
+  display:inline-block;
   font-size:1.1em;
   width:7em;
   height:2em;
@@ -317,6 +317,7 @@ footer a:hover{
 .main{
   display:flex;
   margin-top:4em;
+  animation: zoom 1s;
 }
 
 .main h1{
@@ -340,7 +341,7 @@ footer a:hover{
 }
 
 .main article{
-  padding: 0 1.5em;
+  padding: 0 2.5em;
 }
 
 .main section{
@@ -348,35 +349,28 @@ footer a:hover{
 }
 
 .main section p{
+  font-size:1.2em;
   line-height:180%;
 }
 
-
-
-/*-------------------------About------------------------------*/
-
-.about{
-   animation: about 1s;
-}
-
-.about article section{
+.main article section{
   position:relative;
   overflow:hidden;
   margin-top:2em;
  
 }
 
-.about article section img{
+.main article section img{
   max-width:100%;
   height:auto;
 }
 
-.about article section ul{
+.main article section ul{
   display:flex;
   flex-wrap:wrap;
 }
 
-.about article section ul li{
+.main article section ul li{
   display:block;
   list-style-type:none;
   margin-right:0.5em;
@@ -388,11 +382,27 @@ footer a:hover{
   color: var(--primary-color);
 }
 
-.about article section:nth-last-child(1) ul{
+.main article section a{
+  background-color:var(--secondary-color);
+  color:white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin-right:1em;
+  margin-top:0;
+  margin-bottom:1em;
+}
+
+.main article section a:hover{
+  box-shadow:var(--box-shadow);
+  background-color:var(--secondary-color);
+  color:white;
+}
+
+
+.main article section:nth-last-child(1) ul{
   display:initial;
 }
 
-.about article section:nth-last-child(1) ul li{
+.main article section:nth-last-child(1) ul li{
   color:var(--secondary-text-color);
   text-align:initial;
   border:none;
@@ -490,7 +500,7 @@ footer a:hover{
 
 }
 
-@keyframes about{
+@keyframes zoom{
   0%{
     transform:scale(0.1);
   }
@@ -523,6 +533,7 @@ footer a:hover{
     flex-wrap:wrap;
     background-color:var(--secondary-background-color);
     box-shadow: var(--box-shadow);
+    padding-bottom: 3em;
   }
 
   .main article h1{
