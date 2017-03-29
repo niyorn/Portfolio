@@ -201,7 +201,8 @@ header div div div {
     animation: scroll 1.5s infinite ease-out;
     animation-delay: 4s;
 
-    border-radius: initial;
+    border-radius: initial;
+
     background-color: var(--secondary-color);
 }
 
@@ -370,7 +371,8 @@ footer {
 
     text-align: center;
 
-    color: white;
+    color: white;
+
     background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -441,6 +443,10 @@ footer a:hover {
     margin-bottom: 5em;
 }
 
+.main article section p{
+    margin-bottom:1em;
+}
+
 .main article section img {
     max-width: 100%;
     height: auto;
@@ -473,14 +479,16 @@ footer a:hover {
     margin-right: 1em;
     margin-bottom: 1em;
 
-    color: white;
+    color: white;
+
     background-color: var(--secondary-color);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .main article section a:hover {
     color: white;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color);
+
     box-shadow: var(--box-shadow);
 }
 
@@ -510,7 +518,8 @@ footer a:hover {
     width: 100%;
     height: 100%;
 
-    opacity: 0.6;
+    opacity: 0.6;
+
     background: var(--primary-color);
 }
 
@@ -630,6 +639,12 @@ footer a:hover {
 
 /*-------------------------Media Queries-----------------*/
 
+@media (max-width:40em){
+    .main article section iframe{
+        width:100%;
+    }
+}
+
 @media (min-width: 30.25em) {
     main section article {
         font-size: 1.2em;
@@ -658,9 +673,8 @@ footer a:hover {
     }
     .main article section {
         overflow: hidden;
-
         max-width: 45%;
-        max-height: 35em;
+        max-height: 65em;
     }
     .right {
         margin-left: 5%;
@@ -720,7 +734,8 @@ footer a:hover {
         font-size: 2.5vw;
     }
     header div>div {
-        width: 5em;
+        width: 5em;
+
         height: 5em;
 
         animation: bounce 4.5s cubic-bezier(0.24, 1.26, 0.26, 1.36);
@@ -792,7 +807,8 @@ footer a:hover {
         flex-wrap: wrap;
     }
     .andere article:nth-of-type(2) {
-        margin-right: 1em;
+        margin-right: 1em;
+
         margin-left: 1em;
     }
     .andere article section h3 {
